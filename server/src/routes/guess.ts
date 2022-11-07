@@ -68,6 +68,8 @@ export async function guessRoutes(fastify: FastifyInstance) {
       })
     }
 
+    // E possivel ocorre Erro aqui
+
     if (game.date < new Date()) {
       return reply.status(400).send({
         message: "You cannot send guesses after the game date."
